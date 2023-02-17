@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  uptime-kuma:
+    build: ./botuptime
+    image: shoutout/botuptime:0.0.0
+    container_name: botuptime
+    restart: always
+    volumes:
+      - ./botuptime-data:/app/data
+    ports:
+      - 3001:3001
+    restart: always
